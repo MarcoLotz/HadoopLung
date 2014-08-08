@@ -1,0 +1,10 @@
+
+com.marcolotz.MRComponents
+com.marcolotz.MapperComponents
+com.marcolotz.ReducerComponents
+com.marcolotz.imageprocess
+com.marcolotz.lung.debug
+com.marcolotz.lung.io.inputFormat
+com.marcolotz.lung.io.outputFormat
+com.marcolotz.lung.mapper
+com.marcolotz.lung.reducer
