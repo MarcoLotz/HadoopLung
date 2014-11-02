@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+ XML configuration file written by: Marco Aurélio Lotz
+ (marcolotz.com)
+ It configures the Hadoop Lung processing Hadoop application.
+ -->
+<configuration>
+
+    <property>
+        <name>com.marcolotz.author</name>
+        <value>Marco Aurelio Lotz (marcolotz.com)</value>
+        <description>Application author info</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.name</name>
+        <value>Hadoop Lung Processor</value>
+        <description>Application name</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.map.class</name>
+        <value>com.marcolotz.lung.mapper.LungMapper</value>
+        <description>Lung Processor Mapper Class</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.reduce.class</name>
+        <value>com.marcolotz.lung.reducer.LungReducer</value>
+        <description>Lung Processor Reducer Class</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.maps</name>
+        <value>50</value>
+        <description>Number of mappers tasks</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.reduces</name>
+        <value>50</value>
+        <description>Number of reduce tasks</description>
+    </property>
+
+    <property>
+        <name>mapreduce.reduce.memory.mb</name>
+        <value>1024</value>
+        <description>Reduce memory in Mbytes</description>
+    </property>
+
+    <property>
+        <name>mapreduce.job.inputformat.class</name>
+        <value>com.marcolotz.lung.io.inputFormat.MultipleFilesInputFormat</value>
+        <description>Class that reads the DICOM files</description>
+    </property>
+
+    <property>
+    	<name>mapred.input.dir.recursive</name>
+    	<value>true</value>
+	<description>Forces the input directory to be read recursively</description>
+    </property>
+
+    <property>
+    	<name>mapred.input.dir</name>
+    	<value>/user/marco/TCC/input/onlyLungs</value>
+    	<description>The input path of the MapReduce Application</description>
+    </property>
+
+    <property>
+    	<name>mapred.output.dir</name>
+    	<value>/user/marco/TCC/output/onlyLungs</value>
+    	<description>The output path of the MapReduce Application</description>
+    </property>
+
+    <property>
+    	<name>mapreduce.map.output.key.class</name>
+	<value>com.marcolotz.MRComponents.KeyStructureWritable</value>
+	<description>Key class on map output</description>	
+    </property>
+
+    <property>
+    	<name>mapreduce.map.output.value.class</name>
+    	<value>com.marcolotz.MapperComponents.ImageMetadata</value>
+    	<description>Value class on map output</description>
+    </property>
+    
+     <property>
+        <name>mapreduce.job.output.key.class</name>
+	<value>com.marcolotz.lung.io.outputFormat.SeriesDataWritable</value>
+	<description>Job output key</description>
+        </property>
+
+    <property>
+        <name>mapreduce.job.output.value.class</name>
+        <value>org.apache.hadoop.io.NullWritable</value>
+        <description>job output value</description>
+    </property>
+    
+    <property>
+        <name>com.marcolotz.grayNoduleCandidates.bottomThreshold</name>
+        <value>110</value>
+        <description>Default bottom threshold used by the GrayNodulesCandidates class</description>
+    </property>
+    
+    <property>
+        <name>com.marcolotz.grayNoduleCandidates.topThreshold</name>
+        <value>120</value>
+        <description>Default top threshold used by the GrayNodulesCandidates class</description>
+    </property>
+
+</configuration>
