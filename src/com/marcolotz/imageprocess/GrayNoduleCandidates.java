@@ -1,22 +1,23 @@
 /*******************************************************************************
- * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
- * 
- * Copyright (c) 2014 Marco Aurelio Barbosa Fagnani Gomes Lotz (marcolotz.com)
- * 
- * The source code in this document is licensed under Creative Commons
- * Attribution-NonCommercial-ShareAlike 4.0 International License. You must 
- * credit the author of the source code in the way specified by the author or
- * licenser (but not in a way to suggest that the author or licenser has given 
- * you allowance to you or to your use of the source code). If you modify,
- * transform or create using this source code as basis, you can only distribute
- * the new source code under the same license or a similar license to this one.
- * 
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- * 
- * To see a copy of the license, access:
- * creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+ * Copyright (c) 2002-2016 "Marco Aurelio Barbosa Fagnani Gomes Lotz"
+ * [http://www.marcolotz.com]
+ *
+ * This file is part of Marco Lotz Hadoop Lung solution.
+ *
+ * Hadoop Lung is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
+
 package com.marcolotz.imageprocess;
 
 import java.awt.Color;
@@ -27,8 +28,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import ij.ImagePlus;
-import ij.blob.Blob;
-import ij.blob.ManyBlobs;
 import ij.process.ByteProcessor;
 
 /**
