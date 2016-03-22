@@ -20,13 +20,13 @@
 
     <property>
         <name>mapreduce.job.map.class</name>
-        <value>com.marcolotz.lung.hadooplung.mapper.LungMapper</value>
+        <value>com.marcolotz.lung.mapreduce.mapper.LungMapper</value>
         <description>Lung Processor Mapper Class</description>
     </property>
 
     <property>
         <name>mapreduce.job.reduce.class</name>
-        <value>com.marcolotz.lung.hadooplung.reducer.LungReducer</value>
+        <value>com.marcolotz.mapreduce.hadooplung.reducer.LungReducer</value>
         <description>Lung Processor Reducer Class</description>
     </property>
 
@@ -50,7 +50,7 @@
 
     <property>
         <name>mapreduce.job.inputformat.class</name>
-        <value>com.marcolotz.lung.hadooplung.io.inputFormat.MultipleFilesInputFormat</value>
+        <value>com.marcolotz.lung.mapreduce.io.inputFormat.MultipleFilesInputFormat</value>
         <description>Class that reads the DICOM files</description>
     </property>
 
@@ -74,19 +74,19 @@
 
     <property>
     	<name>mapreduce.map.output.key.class</name>
-	<value>com.marcolotz.lung.hadooplung.MRComponents.KeyStructureWritable</value>
+	<value>com.marcolotz.lung.mapreduce.MRComponents.KeyStructureWritable</value>
 	<description>Key class on map output</description>	
     </property>
 
     <property>
     	<name>mapreduce.map.output.value.class</name>
-    	<value>com.marcolotz.lung.hadooplung.MapperComponents.ImageMetadata</value>
+    	<value>com.marcolotz.lung.mapreduce.MRComponents.ImageMetadata</value>
     	<description>Value class on map output</description>
     </property>
     
      <property>
         <name>mapreduce.job.output.key.class</name>
-	<value>com.marcolotz.lung.hadooplung.io.outputFormat.SeriesDataWritable</value>
+	<value>com.marcolotz.lung.mapreduce.io.outputFormat.SeriesDataWritable</value>
 	<description>Job output key</description>
         </property>
 
@@ -97,13 +97,13 @@
     </property>
     
     <property>
-        <name>com.marcolotz.imageprocess.grayNoduleCandidates.bottomThreshold</name>
+        <name>com.marcolotz.grayNoduleCandidates.bottomThreshold</name>
         <value>110</value>
         <description>Default bottom threshold used by the GrayNodulesCandidates class</description>
     </property>
     
     <property>
-        <name>com.marcolotz.imageProcess.grayNoduleCandidates.topThreshold</name>
+        <name>com.marcolotz.grayNoduleCandidates.topThreshold</name>
         <value>120</value>
         <description>Default top threshold used by the GrayNodulesCandidates class</description>
     </property>
