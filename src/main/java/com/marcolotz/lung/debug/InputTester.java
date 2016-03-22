@@ -40,7 +40,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl;
 import org.apache.hadoop.util.ReflectionUtils;
 
-import com.marcolotz.lung.hadooplung.io.inputFormat.WholeFileInputFormat;
+import com.marcolotz.lung.mapreduce.io.inputFormat.WholeFileInputFormat;
 
 
 /**
